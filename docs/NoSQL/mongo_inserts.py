@@ -9,10 +9,10 @@ database = mongoClient["local"]
 collection = database['fruits']
 
 # insert 작업 진행
-collection.insert_one({"name": "키위", 
+result = collection.insert_one({"name": "키위", 
                        "color": "갈색", 
                        "origin": "뉴질랜드"})
 
 dict_fruit = {"name": "오렌지", "color": "주황색", "origin": "미국"}
-collection.insert_one(dict_fruit)
+result = collection.insert_one(dict_fruit)
 pass
